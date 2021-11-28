@@ -19,12 +19,12 @@ class Node {
 }
 
 
-public class Trie {
+public class Spelling {
     //Root of the trie
     public Node root;
 
     //Constructor. Initializes the root node to an empty string
-    public Trie() {
+    public Spelling() {
         root = new Node("");
     }
 
@@ -113,8 +113,8 @@ public class Trie {
     }
 
     //reads the csv and uses the values to build & return Trie
-    private static Trie parseCSV(String path) throws IOException {
-        Trie trie = new Trie();
+    private static Spelling parseCSV(String path) throws IOException {
+        Spelling trie = new Spelling();
         Scanner sc = new Scanner(new File(path));
         while(sc.hasNextLine()) {
             String[] arr = sc.nextLine().split(",");
@@ -128,7 +128,7 @@ public class Trie {
 //         String filename = "unigram_freq.csv";
         //Get the name of the file passed as an argument to the program
         String filename = args[0];
-         Trie trie = parseCSV(filename);
+         Spelling trie = parseCSV(filename);
 
     }
 }
